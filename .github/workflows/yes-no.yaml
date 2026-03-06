@@ -1,0 +1,21 @@
+# yaml-language-server: $schema=https://json.schemastore.org/github-workflow.json
+
+name: Test
+
+permissions: {}
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  yes:
+    runs-on: ubuntu-latest
+    steps:
+      - run: ${{ true }}
+
+  no:
+    runs-on: ubuntu-latest
+    steps:
+      - run: ${{ false }}
