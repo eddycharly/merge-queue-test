@@ -14,8 +14,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: ${{ true }}
-
+      - name: Adding markdown
+        run: echo '### Hello world (YES) ! 🚀' >> $GITHUB_STEP_SUMMARY
   no:
     runs-on: ubuntu-latest
     steps:
       - run: ${{ false }}
+      - name: Adding markdown
+        run: echo '### Hello world (NO) ! 🚀' >> $GITHUB_STEP_SUMMARY
